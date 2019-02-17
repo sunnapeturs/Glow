@@ -1,0 +1,46 @@
+.h1{
+    @include text-style(1rem,800,0.1rem,1.25rem,$primary-color,uppercase,center);
+    span{
+        font-weight: $font-medium;
+    } 
+    @include desktop{
+        @include text-style(3.5rem,800,0.1rem,4rem,$secondary-color,uppercase,center);
+    }
+}
+.h2{
+    @include text-style(1.5rem,800, 1.5px,1rem,$primary-color,uppercase,center);
+    margin-bottom: 24px;
+    span{
+        color: $secondary-color;
+        font-weight: $font-regular;
+    }
+}
+.h3{
+    @include text-style(0.875rem,800,1px,1rem,$primary-color,uppercase,center);
+    span{
+        @include text-style(0.875rem,400,1px,1rem,$secondary-color,uppercase,center);
+    }
+}
+.h5{
+    @include text-style(1rem,600,2px,1rem,$secondary-color,none,left);
+    padding-bottom: 16px;
+}
+.span{
+    @include text-style(1rem,600,1px,1rem,$primary-color,none,center);
+}
+.p{
+    @include text-style(1rem,400,1px,1.8rem,$primary-color,none,left);
+    @include desktop{
+        @include text-style(1rem,400,1px,1.8rem,#ffff,none,left);
+    }
+}
+.cheakbox-txt{
+    @include text-style(0.875rem,600,1px,2rem,$primary-color,none,left);
+}
+.small-headline{
+    @include text-style(1rem,600,1px, 1rem,$primary-color,none,left)
+}
+.small-headline-span{
+    @include text-style(1rem,400,1px, 1rem,$primary-color,none,left)
+}
+

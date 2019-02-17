@@ -1,0 +1,70 @@
+
+//flexbox
+@mixin flex($direction){
+    display:flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: space-between;
+    @content;
+}
+//flex center
+@mixin flex-center{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    @content;
+}
+//media Q
+@mixin desktop {
+    @media (min-width: $desktop-width) {
+      @content;
+    }
+  }
+//Buttons
+@mixin menu-btn{
+    height: 48px;
+    width: 182px;
+    border-radius: 4px;
+    background-color:#ffff;
+}
+@mixin toggle-btn{
+    width: 152px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    color:#ffff;
+    align-items: center;
+    font-weight: $font-regular;
+    letter-spacing: 2px;
+    @include desktop{
+        width: 220px;
+    }
+}
+//white text in a btn
+@mixin btn-txt{
+    display: flex;
+    align-items: center;
+    font-weight: $font-regular;
+    letter-spacing: 2px;
+    color:#ffff;
+}
+//TEXT STYLE
+@mixin text-style($font-size,$font-weight,$letter-spacing,$line-height,$font-color,$text-transform,$text-align){
+    font-size: $font-size;
+    font-weight: $font-weight;
+    letter-spacing: $letter-spacing;
+    line-height: $line-height;
+    color: $font-color;
+    text-transform: $text-transform;
+    text-align: $text-align;
+    @content;
+}
+// BUTTON
+@mixin btn($width,$height,$background-color){
+    width:$width;
+    height:$height;
+    background-color:$background-color;
+    border-radius:4px;
+}

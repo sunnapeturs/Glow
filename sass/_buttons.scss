@@ -1,0 +1,16 @@
+.action-btn{
+  @include btn(152px,32px,$secondary-color);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color:#fff;
+  margin: 40px auto;
+  cursor: pointer;
+  &:hover{
+    box-sizing: border-box;
+    @include btn(152px,32px,#fff);
+    border: 1px solid $secondary-color;
+    color: $secondary-color; 
+  }
+}
